@@ -1,728 +1,218 @@
-﻿<!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Đếm ngược đến Tết Nguyên Đán 2021 Tân Sửu - By DatDo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+﻿
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Còn bao nhiêu ngày nữa Tết - Đếm ngược Tết Nguyên đán 2021</title>
+    <meta name="description" content="Còn bao nhiêu ngày nữa đến Tết? Trang đếm ngược Tết Nguyên đán chính thức. Thêm vào màn hình không cần cài app.">
+    <meta name="author" content="saptet.com">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="https://datdo1309.github.io/dentet/">
     <meta property="og:type" content="website">
-    <meta name="description" content="Còn bao nhiêu ngày nữa đến Tết Nguyên Đán Tân Sửu 2021?">
-    <meta property="og:title" content="Đếm ngược đến Tết Nguyên Đán 2021 Tân Sửu - By DatDo">
-    <meta property="og:description" content="Còn bao nhiêu ngày nữa đến Tết Nguyên Đán Tân Sửu 2021?">
-    <meta property="og:url" content="https://facebook.com/ytpdatdo/">
-    <meta property="og:site_name" content="Sắp Đến Tết Rồi">
-    <meta property="og:image" content="https://devforum.info/DEMO/tet-ta-countdown/tetta.png">
-    <meta property="og:image:alt" content="Sắp Đến Tết Rồi">
-
-    <script src='jquery-3.2.1.min.js'></script>
-    <script src="js.js"></script>
-
-    <style type="text/css">
-            html,
-        body,
-        div,
-        span,
-        h1,
-        h2 {
-            padding: 0;
-            border: 0;
-            margin: 0;
-            background: transparent;
-            font-size: 100%;
-            font-weight: inherit;
-            vertical-align: baseline;
-        }
-        
-        .clearfix:after {
-            content: "\00A0";
-            display: block;
-            clear: both;
-            visibility: hidden;
-            line-height: 0;
-            height: 0;
-        }
-        
-        html[xmlns] .clearfix {
-            display: block;
-        }
-        
-        * html .clearfix {
-            height: 1%;
-        }
-        
-        html {
-            height: 100%;
-            /* background: radial-gradient(ellipse at bottom, #e82219 10%, #33201a 100%); */
-            background-image: url('2.jpg');
-            background-size: 100%;
-            overflow: hidden;
-            text-align: center;
-        }
-        
-        body {
-            font-size: 1.6em;
-            background: transparent;
-            color: #000000;
-            font-family: 'Dancing Script', Helvetica, Arial, sans-serif;
-        }
-        
-        #topbar {
-            background-color: #000;
-            padding: 5px 0;
-        }
-        
-        #main {
-            max-width: 1100px;
-            margin: auto;
-            margin-top: 5%;
-        }
-        
-        .colorlight {
-            text-shadow: 0 0 10px #efe81d, 0 0 20px #efe81d, 0 0 30px #efe81d, 0 0 40px #f80f1f, 0 0 70px #f80f1f, 0 0 80px #f80f1f, 0 0 100px #f80f1f, 0 0 150px #f80f1f;
-        }
-        
-        h1 {
-            font-size: 3em;
-            margin: .35em 0 0;
-        }
-        
-        h2 {
-            font-size: 2em;
-            margin: 0;
-        }
-        
-        .clock {
-            float: left;
-            overflow: hidden;
-            background-color: #ff60b7;
-            color: #000000;
-            border-radius: 30%;
-            position: relative;
-            width: 20%;
-            height: 0;
-            padding-bottom: 20%;
-            margin: 3% 0 3% 4%;
-        }
-        
-        .clock .num {
-           color: #000000;
-            font-size: 350%;
-            font-weight: 700;
-            height: 0;
-            line-height: 190%;
-        }
-        
-        .clock .text {
-            font-size: 130%;
-            text-transform: uppercase;
-            background-color: #ff2b95;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            line-height: 180%;
-        }
-        
-        .clock.tet {
-            background-color: #f6361e;
-        }
-        
-        .clock.tet .text {
-            background-color: #000000;
-        }
-        
-        #taitro {
-            /* margin-top: 3.4em; */
-        }
-        
-        #taitro a {
-            color: #000000;
-            text-decoration: none;
-            font-size: 1.5em;
-        }
-        
-        #footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-        }
-        
-        #main {
-            margin-top: 130px;
-        }
-        
-        @media (max-width: 767px) {
-            html {
-                height: 100%;
-                /* background: radial-gradient(ellipse at bottom, #e82219 10%, #33201a 100%); */
-                background-image: url('sap-tet-roi.jpg');
-                background-size: 100%;
-                overflow: hidden;
-                text-align: center;
-            }
-            #main {
-                margin-top: 10px;
-            }
-            #taitro {
-                margin-top: 20px;
-            }
-            body {
-                font-size: 14px;
-            }
-            h2 {
-                font-size: 1.6em;
-            }
-            @media (max-width: 480px) {
-                .clock {
-                    width: 35%;
-                    padding-bottom: 35%;
-                    margin: 5% 0 0 10%;
-                }
-                h1 {
-                    margin-top: .55em;
-                }
-            }
-            @media only screen and (max-width: 767px) and (orientation: landscape) {
-                #main {
-                    margin-top: 1%;
-                }
-                h1 {
-                    margin-top: 0;
-                }
-            }
+    <meta property="og:title" content="Còn bao nhiêu ngày nữa Tết - Đếm ngược Tết Nguyên đán 2021 | saptet.com">
+    <meta property="og:site_name" content="saptet.com">
+    <meta property="og:url" content="https://datdo1309.github.io/dentet/">
+    <meta property="og:description" content="Còn bao nhiêu ngày nữa đến Tết? Trang đếm ngược Tết Nguyên đán chính thức. Thêm vào màn hình không cần cài app.">
+    <meta property="og:image" content="tetta.png">
+    
+    <link rel="stylesheet" href="https://www.saptet.com/__/_css.css?ver=1611100100"><style>
+    /* @font-face {font-family: 'calligraphy'; src:url('./__/calli.ttf');} */
+    
+    body{font-family: 'Nunito', sans-serif;background:#FFFCF2;}
+    h2{font-size:calc(1rem + 1.2vw);}
+    .fill{background:#FFCA38;color:inherit;}
+    .fill a{color:#000;}
+    .fill-color{background:#d8303b;color:#fff;}
+    .fill-color a{color:#fff;}
+    a{color:#d8303b;/*#be2119;*/}
+    .outline-color{border-color:#d8303b;color:#d8303b;}
+    .clock,.home h1,.home h2,.home #tetornot{font-family:'Dancing Script',cursive;font-weight:700;text-align:center;}
+    .home #tetornot{font-size:calc(.9rem + 1.2vw);}
+    .home h1 {font-size:calc(.96rem + 1.9vw);margin-top:.7em;}
+    .home h2{font-size:calc(1.8rem + 3.6vw);}
+    .home .main-article{margin:0;}
+    .home #main h2+p img:first-child{max-width:700px;}
+    .clock .num{font-size:calc(2rem + 3.6vw);}
+    .clock .num#days-2{font-size:calc(.5rem + 1.2vw);}
+    .clock .text{font-size:calc(.7rem + 1.7vw);}
+    #header{display:flex;align-items:center;justify-content:center;padding-top:.6em;padding-bottom:.6em;box-shadow:1px 1px 10px rgba(0,0,0,0.15);}
+    .logo img {width:calc(2.5vw + 25px);}
+    nav>a.button{padding:0 .9em;height:28px;font-size:.9em;}
+    nav>a,.share{margin-left:calc(2vw + 13px);}
+    #menu{padding:1em;}
+    #menu li{padding:.5em 0;border-bottom:1px solid #eee;font-weight:bold;}
+    button.hamburger{display:block;padding:0;order:-1;}
+    .hamburger>div {width:calc(1vw + 18px);height:3px;background:#d8303b;margin:calc(.3vw + 2px) 0;border-radius:100px;}
+    
+    #main img{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:auto;max-width:calc(100% + 30px);}
+    
+    .clock{display:flex;justify-content:space-around;flex-wrap:wrap;margin:1.5em .5em -1em;}
+    .clock  .clock-item{width:35%;padding-bottom:35%;border-radius:30%;overflow:hidden;background:#ff7eb4;position:relative;}
+    .clock>*:nth-child(-n+2){margin-bottom:1em;}
+    .clock .clock-item>*{position:absolute;width:100%;display:flex;align-items:center;justify-content:center;}
+    
+    .clock .num{top:0;height:72%;}
+    .clock .num#days-2{top:55%;height:17%;}
+    .clock .text{bottom:0;height:28%;background:#ff3895;text-transform:uppercase;font-weight:400;}
+    
+    .featured{font-style:italic;text-transform:uppercase;font-size:.9em;}
+    .featured:after{content:"HOT";margin-left:.5em;background:#ffdd7e;color:#000;line-height:1;padding:3px 5px 2px;border-radius:2px;font-size:.7em;font-weight:700;vertical-align:super;}
+    .share-bottom{text-align:center;margin-top:2em;}
+    
+    figcaption{text-align:center;font-style:italic;margin-top:.6em;}
+    
+    @media only screen and (min-width:991px){
+    .clock{margin-left:-3vw;margin-right:-3vw;}	
+    }
+    @media only screen and (min-width:760px) {
+    #header,#main,#footer{padding-left:calc(35vw - 250px);padding-right:calc(35vw - 250px);}
+    #main img{margin:0 auto;max-width:100%;}
+    #main img{margin-top:1.2em;}
+    }
+    @media only screen and (min-width:568px) {
+    .clock{justify-content:space-between;}
+    .clock .clock-item{width:22%;padding-bottom:22%;}
+    .clock .clock-item:nth-child(-n+2){margin-bottom:0;}	
+    }
+    
+    #footer{text-align:center;padding-top:2em;padding-bottom:2em;}
+    #footer img{width:30%;max-width:160px;margin-left:auto;margin-right:auto;}
+    #footer a,#footer button{font-weight:bold;}
+    #footer a+a{margin-left:1vw;}
+    #footer>*+*{margin-top:.6em;}
+    
+    
+    #footer{padding-bottom:65px;}
+    
+    .fixed-bot{position:fixed;bottom:0;width:100%;/*height:65px;*/display:flex;align-items:center;justify-content:center;text-align:center;}
+    .fixed-bot img{max-height:180px;}
+    .fixed-bot button{display:block;height:auto;}
+    
+    #a2hs>*{margin:.5em 0;}
+    #a2hs button{width:100%;}
+    
+    
+    
+    
+    .clearfix:after { content: "\00A0"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}html[xmlns] .clearfix { display: block;}* html .clearfix{ height: 1%;}
+    
+    #topbar{background-color:#000;padding:5px 0;}
+    .colorlight{text-shadow: 0 0 10px #efe81d,0 0 20px #efe81d,0 0 30px #efe81d,0 0 40px #f80f1f,0 0 70px #f80f1f,0 0 80px #f80f1f,0 0 100px #f80f1f,0 0 150px #f80f1f;}
+    .clock_ {float:left;overflow_:hidden;background-color:#fff;color:#222;border-radius: 30%;position:relative;width:20%;height:0;padding-bottom:20%;margin:3% 0 3% 4%;}
+    .clock____ .num {font-size:350%;font-weight:700;height_:190%;line-height:170%;}
+    .clock .num-small {font-size:100%;font-weight:700;}
+    .clock____ .text {font-size:130%;text-transform:uppercase;background-color:#eee;position:absolute;bottom:0;width:100%;line-height:180%;}
+    .clock.tet{background-color:#f6361e;}
+    .clock.tet .text{background-color:#d00120;}
+    #taitro{margin-top:3.4em;}
+    .float{display:flex;align-items:center;}
+    .float {font-size:1.3em;}
+    @media (min-width:1025px) {.float{display:none;}}
+    
+    
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&subset=vietnamese" rel="stylesheet">
-</head>
-
-<body>
-    <div style="display:none">
-        <script type="text/javascript">
-            var _qevents = _qevents || [];
-            (function() {
-                var elem = document.createElement('script');
-                elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-                elem.async = true;
-                elem.type = "text/javascript";
-                var scpt = document.getElementsByTagName('script')[0];
-                scpt.parentNode.insertBefore(elem, scpt);
-            })();
-            _qevents.push({
-                qacct: "p-0cfM8Oh7M9bVQ"
-            });
-        </script>
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KGBCJR8');</script></head>
+    <body class=home><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGBCJR8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!--a class="sr" href="#main"></a-->
+    <header role="banner" id="header">
+        <nav>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+                <article class="main-article">
+                <header>
+                    <h1>Còn bao nhiêu ngày nữa Tết?</h1>
+                </header>
+                <div class="content">
+                                    <section>
+                    <div id="tetornot" class="">Sắp Tết rồi!!! Chỉ còn...</div>
+                    <div class="clock">
+                        <div class="clock-item">
+                        <div id="days" class="num"></div>
+                        <div id="days-2" class="num"></div>
+                        <div id="days-text" class="text">Ngày</div>
+                        </div>
+                        <div class="clock-item">
+                        <div id="hours" class="num"></div>
+                        <div id="hours-text" class="text">Giờ</div>
+                        </div>
+                        <div class="clock-item">
+                        <div id="mins" class="num"></div>
+                        <div id="mins-text" class="text">Phút</div>
+                        </div>
+                        <div class="clock-item">
+                        <div id="secs" class="num"></div>
+                        <div id="secs-text" class="text">Giây</div>
+                        </div>
+                    </div>
+                    </section>
+                                    <h2>Tân Sửu 2021</h2>
+    <p><img loading="lazy" class="alignnone size-full wp-image-26" src="Tet-Nguyen-dan-Tan-Suu-2021.png" alt="Tết Nguyên đán Tân Sửu 2021" width="1133" height="1050" srcset="Tet-Nguyen-dan-Tan-Suu-2021.png 1024w, Tet-Nguyen-dan-Tan-Suu-2021.png 768w" sizes="(max-width: 1133px) 100vw, 1133px" /></p>
+    <h3>Tết 2021 vào ngày nào?</h3>
+    <p>Mùng 1 Tết âm lịch là thứ sáu ngày 12/2 dương lịch. Do năm Canh Tý 2020 là năm nhuận âm lịch (có 2 tháng tư) nên Tết 2021 đến chậm hơn gần 1 tháng (Tết âm lịch 2020 là vào ngày 25/1/2020 dương lịch). Năm mới 2021 cũng đón chào ngày lễ tình nhân Valentine vào đúng mùng 3 Tết.</p>
+    <h3>Lịch nghỉ Tết 2021</h3>
+    <p>Năm nay công chức, viên chức được nghỉ Tết đủ 7 ngày, từ thứ tư tuần này đến hết thứ ba tuần sau. Lịch nghỉ tương đối dài này giúp bạn cùng gia đình có nhiều kế hoạch để hưởng một mùa Tết trọn vẹn và đầy đủ hơn.</p>
+    <ul>
+    <li><em>Dương lịch:</em> Từ ngày 10/2 đến hết ngày 16/2.</li>
+    <li><em>Âm lịch:</em> Từ ngày 29/12 Canh Tý 2020 đến hết mùng 5 Tết Tân Sửu 2021.</li>
+    </ul>
+    <figure><img loading="lazy" width="778" height="387" class="wp-image-32 size-full" src="lich-nghi-tet-2021-1.jpg" alt="Lịch nghỉ Tết Nguyên đán 2021" srcset="lich-nghi-tet-2021-1.jpg, lich-nghi-tet-2021-1.jpg" sizes="(max-width: 778px) 100vw, 778px" /><figcaption>Lịch nghỉ Tết Nguyên đán 2021</figcaption></figure>
+    <h3>Năm 2021 là năm con gì?</h3>
+    <p><em><strong>Con trâu</strong></em>. Sửu là trâu, đứng vị trí thứ hai trong bảng 12 con giáp (Thập Nhị Chi). Bảng 12 con giáp này kết hợp với 10 Thiên Can tạo thành hệ thống tên gọi năm âm lịch của một số nước Á Đông. 12 Địa Chi (con giáp) đầy đủ theo thứ tự là: Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi.</p>
+    <figure><img src="IMG_1541(1).jpeg" alt="Tết Nguyên đán cổ truyền" /><figcaption>Lễ hội truyền thống núi Voi xuân Kỷ Hợi, Huyện An Lão Năm 2019 &#8211; Photo: Internet</figcaption></figure>
+    <p><em>Vậy là, chỉ còn ít ngày nữa đến Tết.</em></p>
+    <p><em>Năm Canh Tý xảy ra nhiều biến động tại Việt Nam và thế giới nói chung. Thật không may là có nhiều biến cố đáng buồn, dù đã kết thúc hay vẫn đang tiếp diễn, vẫn để lại nhiều hệ lụy cho chúng ta trong đầu năm con trâu này.</em></p>
+    <p><em>Nhớ lại những buồn vui, sắp xếp những dang dở năm cũ, lấy đà chuẩn bị đón chào năm mới với thật nhiều may mắn. Tết đến rất nhanh, nhưng mà cũng rất vui.</em></p>
+    <p><em>Đại dịch toàn cầu chưa từng có tiền lệ COVID-19 cướp đi sinh mạng biết bao nhiêu người trên trái đất, chủng mới đã và sẽ tiếp tục đe dọa phần lớn nhân loại thêm một thời gian nữa. Nhưng vaccine là vũ khí chống lại tất cả. Kinh tế sẽ phục hồi. Loài người sẽ chiến thắng căn bệnh truyền nhiễm khủng khiếp này và sẽ nhớ về nó một kinh nghiệm đắt giá trong lịch sử tồn tại của mình.</em></p>
+    <p><em>Lũ lụt lịch sử dồn dập tàn phá miền Trung. Miền Trung luôn hứng chịu những thiên tai khắc nghiệt nhất trong dải đất hình chữ S: này. Nhưng tình người mà chúng ta đã chứng kiến còn mạnh mẽ và bền bỉ hơn những cơn lũ vô tình kia. Và miền Trung sẽ lại cất tiếng cười đón những ngày nắng ấm đầu tiên, hy vọng một năm mới khởi đầu cho rất rất nhiều may mắn.</em></p>
+    <p><em>Bầu cử Tổng thống Mỹ – cuộc bầu cử gay cấn và nặng nề với nhiều sự kiện có thể nói là “vô tiền khoáng hậu” trong lịch sử nước Mỹ. Nó buộc chúng ta phải đặt lại một số câu hỏi về giá trị của dân chủ, và tự do.</em></p>
+    <p><em>Hãy đếm từng giọt đồng hồ trôi qua, khép lại những vui buồn, ngọt bùi cay đắng, mở ra ngày Tết cổ truyền thiêng liêng tên gọi Trâu Vàng.</em></p>
+    <p><em>Như một lời chúc phúc đầu xuân mới cho tất cả chúng ta.</em></p>
+    <p><em>Đến Tết - https://datdo1309.github.io/dentet</em></p>
+    <p><em><strong>                         </strong></em></p>
+                </div>                
+            </main>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0" nonce="wWtwTlkJ"></script>
+    <footer id="footer" class="fill font-">
+    <div>
+    <a href="https://datdo1309.github.io/dentet/" rel="home">Trang chủ</a>
+    <a href="https://www.facebook.com/ytpdatdo/">Liên hệ</a>
     </div>
-
-    <div id="st1608280021" style="z-index:999999 !important;z-index:999999999 !important;">
-        <style type="text/css">
-            #st1608280021 * {
-                box-sizing: content-box !important;
-            }
-            
-            #st1608280021 a {
-                display: inline-block !important;
-                vertical-align: top;
-                padding: 0;
-                margin: 0;
-            }
-            
-            #st1608280021 a img {
-                display: inline-block !important;
-            }
-            
-            #st1608280021 ._xt_ad_close,
-            #st1608280021 ._xt_ad_close_internal {
-                display: inline-block !important;
-                position: absolute !important;
-                right: 6px !important;
-                width: 20px !important;
-                height: 20px !important;
-                cursor: pointer;
-            }
-            
-            #st1608280021 ._xt_ad_close {
-                top: -10px !important;
-            }
-            
-            #st1608280021 ._xt_ad_close_internal {
-                border: 6px solid transparent;
-                top: -12px !important;
-                right: 3px !important;
-            }
-            
-            #a1608280021 {
-                display: inline-block !important;
-                position: relative !important;
-                text-align: left !important;
-                visibility: visible !important;
-                max-width: 100% !important;
-                max-height: none !important;
-                z-index: 999999 !important;
-                z-index: 999999999 !important;
-            }
-            
-            #a1608280021 img {
-                max-width: none !important;
-                max-height: none !important;
-                width: auto !important;
-                height: auto !important;
-                min-width: 0 !important;
-                min-height: 0 !important;
-            }
-            
-            .fba1608280021 {
-                color: #1D1EEB !important;
-                background-color: #fff !important;
-                padding: 10px 50px 10px 10px !important;
-                border: 1px solid #2C2C2C !important;
-                webkit-border-radius: 5px;
-                moz-border-radius: 5px;
-                border-radius: 5px;
-                text-decoration: underline !important;
-                font-weight: bold !important;
-                display: block !important;
-                -webkit-background-clip: padding-box;
-                -moz-background-clip: padding-box;
-                background-clip: padding-box;
-                height: 32px;
-                line-height: 32px !important;
-                background-image: url(//xtgem.com/images/arrow.gif) !important;
-                background-repeat: no-repeat !important;
-                background-position: 95% center !important;
-            }
-            
-            .fbp1608280021 {
-                position: relative !important;
-                display: block !important;
-                width: 320px !important;
-                height: 50px !important;
-                text-align: left !important;
-                background-color: #fff !important;
-                -moz-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
-                -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
-                box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
-                padding: 3px !important;
-                border-radius: 3px !important;
-                border: 1px solid #6bc135 !important;
-                text-decoration: underline !important;
-            }
-            
-            .fbp_txt1608280021 {
-                position: relative !important;
-                display: inline-block !important;
-                min-width: 200px;
-                max-width: 200px;
-                height: 50px !important;
-                vertical-align: top !important;
-                line-height: 50px !important;
-                margin-left: 6px !important;
-                text-align: left !important;
-                color: #0274d4 !important;
-                font-family: Helvetica, Arial, sans-serif !important;
-                font-size: 13px !important;
-                font-weight: bold !important;
-                text-decoration: underline !important;
-            }
-            
-            .fbp_ico1608280021 {
-                position: absolute !important;
-                right: 10px !important;
-                height: 50px !important;
-                line-height: 46px !important;
-                vertical-align: top !important;
-                color: #6bc135 !important;
-            }
-            
-            #st1608280021 .rolling_ad {
-                display: none !important;
-            }
-            
-            #st1608280021 .rolling_ad.roll_on {
-                display: inline-block !important;
-            }
-        </style>
+    <div class="hide-pwa">
+    <button class="fly-click" data-flyid="#a2hs" style="font-size:.9em;text-transform:uppercase;">Thêm vào màn hình (Không cần cài app)</button>
     </div>
-
-    <div id="main">
-        <h1 id="tetornot" class="">Sắp Tết rồi!!!</h1>
-        <div class="clearfix">
-            <div class="clock">
-                <div id="days" class="num">&nbsp;</div>
-                <div id="days-text" class="text">Ngày</div>
-            </div>
-            <div class="clock">
-                <div id="hours" class="num">&nbsp;</div>
-                <div id="hours-text" class="text">Giờ</div>
-            </div>
-            <div class="clock">
-                <div id="mins" class="num">&nbsp;</div>
-                <div id="mins-text" class="text">Phút</div>
-            </div>
-            <div class="clock">
-                <div id="secs" class="num">&nbsp;</div>
-                <div id="secs-text" class="text">Giây</div>
-            </div>
+    <div>&copy; 2021 DatDo. Giữ quyền mọi nội dung.</div>
+    </footer>
         </div>
-
-        <div id="taitro">
-            <a href="https://facebook.com/ytpdatdo/" target="_blank">
-            Đếm ngược<br> Tết Nguyên Đán <span id="tentet">&nbsp;</span><br>
-
-            </a>
-        </div>
+    <div class="fly mid" id="a2hs">
+    <h3>Hướng dẫn nhanh<a href="/a2hs/" style="font-size:.7em;margin-left:4em;"></a></h3>
+    <h5>Safari trên iPhone/iPad</h5>
+    <p>Nhấn vào biểu tượng <em>Chia sẻ</em> của trình duyệt (phía dưới, ở giữa), chọn <em>Thêm vào MH chính (Add to Home Screen)</em>.</p>
+    <p>Nút <em>Chia sẻ</em> của iPad nằm ở góc trên bên phải.</p>
+    <h5>Chrome trên Android</h5>
+    <p>Nhấn vào <em>menu hình ba chấm dọc</em> của trình duyệt (góc trên bên phải), chọn <em>Thêm vào Màn hình chính (Add to Home screen)</em>.</p>
+    <button class="fly-close fill">Tôi đã hiểu</button>
     </div>
-    
-<iframe scrolling="no" width=0 height=0 src=https://zingmp3.vn/embed/playlist/ZUC7Z8AA?start=true frameborder="0" allowfullscreen="true"/>
-    
-    <style type="text/css">
-        #xt_auth_container {
-            position: static;
-            display: inline;
-            display: inline-block;
-            text-align: right;
-            margin: 3px 0;
-            padding: 0;
-            width: 100%;
-            height: auto;
-            border: none;
-        }
-        
-        .xt_auth_view {
-            position: static;
-            display: inline;
-            display: inline-block;
-            text-align: right;
-            margin: 0;
-            padding: 0;
-            width: auto;
-            height auto;
-            border: none;
-        }
-        
-        .xt_auth_action {
-            text-align: left;
-            position: static;
-            display: inline;
-            zoom: 1;
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 5px 0 0;
-            padding: 0 5px;
-            height: 20px;
-            width: auto;
-            border: none;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            -o-border-radius: 3px;
-            border-radius: 3px;
-            background-color: #2e2e2e;
-            background-color: rgba(0, 0, 0, 0.4);
-            !background-color: #2e2e2e;
-            font: 600 12px/20px "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-            text-decoration: none;
-            -webkit-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.08);
-            -moz-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.08);
-            -o-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.08);
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.08);
-            color: #fff;
-            -webkit-user-select: none;
-        }
-        
-        .xt_auth_action>* {
-            vertical-align: top;
-        }
-        
-        .xt_auth_action:hover {
-            background-color: #1f1f1f;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-        
-        .xt_auth_action:link,
-        .xt_auth_action:visited,
-        .xt_auth_action:active,
-        .xt_auth_action:hover {
-            text-decoration: none;
-            color: #fff;
-        }
-        
-        .xt_auth_icon,
-        .xt_auth_avatar {
-            position: static;
-            display: inline;
-            display: inline-block;
-            width: 13px;
-            height: 13px;
-            margin: 3px 1px 0 0;
-            padding: 0;
-            vertical-align: top;
-            border: 0;
-        }
-        
-        .xt_auth_icon {
-            background-image: url(http://xtgem.com/images/authbar/auth_sprite_v2.png);
-            margin-right: 0;
-        }
-        
-        .xt_auth_icon_enchanted .xt_auth_icon {
-            background-size: 103px;
-            /* margin: 4px 2px 0 0; */
-        }
-        /* join & subscribe */
-        
-        .xt_auth_join .xt_auth_icon,
-        .xt_auth_subscribe .xt_auth_icon {
-            background-position: -92px 13px;
-        }
-        /* inbox */
-        
-        .xt_auth_inbox .xt_auth_icon {
-            background-position: -78px 13px;
-        }
-        /* rate */
-        
-        .xt_auth_rate .xt_auth_icon {
-            background-position: 0 14px;
-        }
-        /* unrate */
-        
-        .xt_auth_unrate .xt_auth_icon {
-            background-position: -13px 14px;
-        }
-        /* star */
-        
-        .xt_auth_star .xt_auth_icon {
-            background-position: -26px 13px;
-        }
-        /* unstar */
-        
-        .xt_auth_unstar .xt_auth_icon {
-            background-position: -39px 13px;
-        }
-        /* repost */
-        
-        .xt_auth_repost .xt_auth_icon {
-            background-position: -52px 12px;
-            margin-top: 4px;
-        }
-        /* reposted */
-        
-        .xt_auth_reposted .xt_auth_icon {
-            background-position: -65px 12px;
-            margin-top: 4px;
-        }
-        /* join & subscribe */
-        
-        .xt_auth_icon_enchanted .xt_auth_join .xt_auth_icon,
-        .xt_auth_icon_enchanted .xt_auth_subscribe .xt_auth_icon {
-            background-position: 11px 0.5px;
-            width: 12px;
-        }
-        /* inbox */
-        
-        .xt_auth_icon_enchanted .xt_auth_inbox .xt_auth_icon {
-            background-position: 25px 1px;
-        }
-        /* rate */
-        
-        .xt_auth_icon_enchanted .xt_auth_rate .xt_auth_icon {
-            background-position: 0 0;
-        }
-        /* unrate */
-        
-        .xt_auth_icon_enchanted .xt_auth_unrate .xt_auth_icon {
-            background-position: -13px 0;
-        }
-        /* star */
-        
-        .xt_auth_icon_enchanted .xt_auth_star .xt_auth_icon {
-            background-position: 77px 0;
-        }
-        /* unstar */
-        
-        .xt_auth_icon_enchanted .xt_auth_unstar .xt_auth_icon {
-            background-position: 64px 0;
-        }
-        /* repost */
-        
-        .xt_auth_icon_enchanted .xt_auth_repost .xt_auth_icon {
-            background-position: 51px 1px;
-            margin: 3px 0 0 0;
-        }
-        /* reposted */
-        
-        .xt_auth_icon_enchanted .xt_auth_reposted .xt_auth_icon {
-            background-position: 39px 1px;
-            margin: 3px 0 0 0;
-        }
-        /* hidding */
-        
-        .xt_auth_unstar,
-        .xt_auth_unsubscribe,
-        .xt_auth_unrate {
-            display: none;
-        }
-        
-        .xt_auth_action_star_active .xt_auth_unstar,
-        .xt_auth_action_rate_active .xt_auth_unrate,
-        .xt_auth_action_subscribe_active .xt_auth_unsubscribe {
-            display: inline-block;
-        }
-        
-        .xt_auth_action_star_active .xt_auth_star,
-        .xt_auth_action_rate_active .xt_auth_rate,
-        .xt_auth_action_subscribe_active .xt_auth_subscribe {
-            display: none;
-        }
-        
-        #xt_auth_container {
-            position: fixed;
-        }
-        
-        html {
-            padding-top: 20px;
-        }
-        
-        #xt_auth_container {
-            top: 0;
-            left: 0;
-        }
-        
-        #xt_auth_container,
-        .xt_auth_view,
-        .xt_auth_icon,
-        .xt_auth_avatar {
-            max-height: none !important;
-            max-width: none !important;
-            min-width: none !important;
-            min-width: none !important;
-            opacity: 1 !important;
-            text-indent: 0 !important;
-            visibility: visible !important;
-        }
-    </style>
-
-    
-
-    <script type="text/javascript">
-        (function() {
-            var doc = document;
-            var body = doc.body;
-            var xhr_done_auth = true;
-
-            doc.addEventListener ? window.addEventListener('load', init, false) : window.attachEvent('onload', init);
-
-            function init() {
-                doc = document;
-                body = doc.body;
-
-                var el_auth = doc.getElementById('xt_auth_container');
-
-                doc.addEventListener ? el_auth.addEventListener('click', hook_xhr_action, false) : el_auth.attachEvent('onclick', hook_xhr_action);
-
-                if ('backgroundSize' in doc.body.style) {
-                    if (window.devicePixelRatio && window.devicePixelRatio > 1) {
-                        el_auth.className += ' xt_auth_icon_enchanted';
-                    }
-                }
-            }
-
-            // bind xhr links
-            function hook_xhr_action(e) {
-                var e = e || window.event;
-                var target = e.target || e.srcElement;
-                target = target.className == 'xt_auth_icon' ? target.parentNode : target;
-
-                if (target.getAttribute('data-xhr')) {
-                    var url = target.href;
-                    url = url + (url.indexOf('?') == -1 ? '?via_ajax=1' : '&via_ajax=1');
-                    load_data({
-                        url: url,
-                        xhr_done: xhr_done_auth,
-                        callback: handle_xhr_response
-                    });
-                    (e.preventDefault) ? e.preventDefault(): e.returnValue = false;
-                    return false;
-                }
-            }
-
-            function handle_xhr_response(xhr) {
-
-                function handle_error(xhr) {
-                    window.location.href = window.location.href;
-                }
-
-                function handle_success(xhr) {
-                    var wrapper = document.getElementById('xt_auth_container');
-                    var tmp_class = wrapper.className;
-
-                    var current_action = xhr.response.split(';')[1];
-
-                    var actions = {
-                        bookmark: 'xt_auth_action_star_active',
-                        vote: 'xt_auth_action_rate_active',
-                        subscribe: 'xt_auth_action_subscribe_active'
-                    };
-
-                    for (key in actions) {
-                        if (!actions.hasOwnProperty(key)) continue;
-                        if (current_action.indexOf(key) == -1) continue;
-
-                        wrapper.className = current_action.indexOf('un') == -1 ? tmp_class + ' ' + actions[key] : tmp_class.replace((' ' + actions[key]), '');
-                    }
-
-                }
-
-                xhr.response = xhr.response ? xhr.response : xhr.responseText;
-
-                (xhr.status != 200 || xhr.response.indexOf('ERR;') != -1) ? handle_error(xhr): handle_success(xhr);
-            }
-
-            //load_data( { url: url, method: method, data: data, async: async, xhr_done: xhr_done, callback: callback });
-            function load_data(settings) {
-
-                var async = settings.async ? !!settings.async : true,
-                    url = settings.url ? settings.url.toString() : false,
-                    method = settings.method ? settings.method.toUpperCase() : 'GET',
-                    callback = settings.callback ? settings.callback : false,
-                    data = settings.data ? settings.data.toString() : '',
-                    xhr_done = settings.xhr_done ? settings.xhr_done : null,
-                    xhr;
-
-                // xhr in progress or url not provided -> exit
-                if (!((xhr_done == true || xhr_done == null) && url)) return;
-
-                if (typeof XMLHttpRequest !== 'undefined') {
-                    xhr = new XMLHttpRequest();
-                } else {
-                    try {
-                        xhr = new XMLHttpRequest("MSXML2.XmlHttp.5.0") || new XMLHttpRequest("MSXML2.XmlHttp.4.0") ||
-                            new XMLHttpRequest("MSXML2.XmlHttp.3.0") || new XMLHttpRequest("MSXML2.XmlHttp.2.0") ||
-                            new XMLHttpRequest("Microsoft.XmlHttp");
-
-                    } catch (e) {}
-                }
-
-                // if xhr object does not supported or url not given, exit
-
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState != 4) return;
-
-                    if (xhr_done != null) xhr_done = true;
-                    callback ? callback(xhr) : null;
-                }
-
-                xhr.open(method, url, async);
-
-                if (method === 'POST') {
-                    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xhr.send(data);
-                } else {
-                    xhr.send(null);
-                }
-
-                if (xhr_done != null) xhr_done = false;
-            };
-        })();
-    </script>
-</body>
-
-</html>
+    <div class="scrim fly-close"></div>
+    <script src="https://www.saptet.com/__/_script.js?2021"></script>
+    <script>$(document).ready(function(){var e=[{name:"Mậu Tuất",m1:Date.parse("Feb 16 2018 00:00:00")},{name:"Kỷ Hợi",m1:Date.parse("Feb 5 2019 00:00:00")},{name:"Canh Tý",m1:Date.parse("Jan 25 2020 00:00:00")},{name:"Tân Sửu",m1:Date.parse("Feb 12 2021 00:00:00")}],t=e.length;setInterval(function(){for(var a=(new Date).getTime(),n=0;n<t;n++){var o=e[n].m1-864e5,r=e[n].m1+864e5,s=e[n].m1+2592e5;if(a<=s){var m=e[n].m1,l=!1,f=(e[n].name,"Chúc"),i="Mừng",x="Năm",c="Mới",h="Ngày",g="Giờ",u="Phút",d="Giây";if(a>=e[n].m1&&(m=s,a>=r||(l=!0,h="Cung",g="Chúc",u="Tân",d="Xuân")),!l){var M=m-a;c=Math.floor(M/1e3%60),x=Math.floor(M/1e3/60%60),i=Math.floor(M/36e5%24),f=Math.floor(M/864e5)}$("#days").text(f),$("#days-2").text("Ông Táo: "+Math.floor((Date.parse("Feb 4 2021 00:00:00")-a)/864e5)),$("#hours").text(i),$("#mins").text(x),$("#secs").text(c),$("#days-text").text(h),$("#hours-text").text(g),$("#mins-text").text(u),$("#secs-text").text(d),a>=o&&($("html").css({background:"radial-gradient(ellipse at bottom, #efe81d 0%, #f80f1f 100%)"}),$(".clock").toggleClass("tet"),$(".clock .text").toggleClass("tet"));break}}},1e3)});
+    $('a[target!="_blank"]').each(function (e) {
+        var idx = this.href.lastIndexOf("#");
+        if (idx > -1) this.href = this.href.substr(0, idx) + window.location.search + this.href.substr(idx); else this.href += window.location.search;
+        });var form_msg_invalid='Vui lòng nhập thông tin',form_msg_done='Cảm ơn bạn đã gửi thư liên hệ.',form_msg_error='Đã xảy ra lỗi! Vui lòng thử lại sau.';</script>
+    <!--script>var form_msg_invalid='Vui lòng nhập thông tin',form_msg_done='Cảm ơn bạn đã gửi thư liên hệ.',form_msg_error='Đã xảy ra lỗi! Vui lòng thử lại sau.';$(document).ready(function(){var t=[{name:"Mậu Tuất",m1:Date.parse("Feb 16 2018 00:00:00")},{name:"Kỷ Hợi",m1:Date.parse("Feb 5 2019 00:00:00")},{name:"Canh Tý",m1:Date.parse("Jan 25 2020 00:00:00")},{name:"Tân Sửu",m1:Date.parse("Feb 12 2021 00:00:00")}],e=t.length;setInterval(function(){for(var n=(new Date).getTime(),a=0;a<e;a++){var o=t[a].m1-864e5,r=t[a].m1+864e5,m=t[a].m1+2592e5;if(n<=m){var i=t[a].m1,s=!1,c=a+2018,g=t[a].name+" "+c,p="Đếm ngược đến Tết "+g+" - Sắp Tết!",l="Sắp Tết rồi!!! Chỉ còn...",h="Chúc",u="Mừng",x="Năm",T="Mới",f="Ngày",y="Giờ",d="Phút",C="Giây";if(n>=t[a].m1&&(i=m,n>=r?l="Sắp hết Tết rồi!!!":(s=!0,l="Tết rồi!!!Tết rồi!!!",f="Cung",y="Chúc",d="Tân",C="Xuân")),!s){var b=i-n;T=Math.floor(b/1e3%60),x=Math.floor(b/1e3/60%60),u=Math.floor(b/36e5%24),h=Math.floor(b/864e5)}$("#tetornot").text(l),$("#days").text(h),$('#days-2').text('Ông Táo: '+Math.floor((Date.parse("Feb 4 2021 00:00:00")-n)/(1000*60*60*24))),$("#hours").text(u),$("#mins").text(x),$("#secs").text(T),$("#days-text").text(f),$("#hours-text").text(y),$("#mins-text").text(d),$("#secs-text").text(C),$("#tet").text(g),n>=o&&($("html").css({background:"radial-gradient(ellipse at bottom, #efe81d 0%, #f80f1f 100%)"}),$(".clock").toggleClass("tet"),$(".clock .text").toggleClass("tet"));break}}},1e3);if (window.location.href.indexOf("source") != -1) {$('.float').hide();}});</script--></body></html>
